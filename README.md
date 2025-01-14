@@ -36,6 +36,7 @@ To create the necessary data model for analysis and fulfill the business needs d
 One data source (sales budgets) was provided in Excel format and connected in the data model later in the process.
 
 Below are the SQL statements for cleansing and transforming necessary data.
+![datastructure](./Img/data_structure.png)
 
 ### Dimension Tables
 #### Customers
@@ -44,18 +45,21 @@ This query retrieves cleansed customer data, including names, gender, first purc
 - Combines first and last names for a full name field.
 - Joins geography details for enhanced context.
 - Results are sorted by customer key.
+ ![customer](./Img/dim_customer.png)
 
 #### Calendar
 This query retrieves a structured view of the date dimension table, including:
 - Full and abbreviated date details such as day, month, year, week number, and quarter.
 - Filters dates from 2012 onwards to ensure relevance.
 - Provides both textual and numeric representations for easy analysis.
-
+![calendar](./Img/dim_calendar.png)
 #### Products
 This query retrieves a detailed and cleansed product dataset, including:
 - Product name, category, subcategory, color, size, and description.
 - Ensures data quality by setting a default status for missing values.
 - Organizes the output in ascending order by product key.
+
+![product](./Img/dim_product.png)
 
 ### Fact Tables
 #### Sales
@@ -63,7 +67,7 @@ This query retrieves key details from the Internet Sales fact table, including:
 - Product, customer, and order-specific data.
 - Includes an optional filter to limit sales to the last 12 years.
 - Organizes results chronologically by order date.
-
+![sales](./Img/dim_sales.png)
 ---
 
 ## Dashboards
@@ -75,6 +79,8 @@ This Power BI dashboard integrates all cleansed tables to provide a comprehensiv
 - Top 10 products and customers.
 - A sales trend over the year.
 - A global heat map highlighting city-level sales performance.
+
+![sales overview](./Img/sales_overview.png)
 
 ### Customer Details
 The Customer Details dashboard enhances analysis with:
