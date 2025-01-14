@@ -81,3 +81,5 @@ The Customer Details dashboard enhances analysis with:
 - A detailed table featuring a heat map of customer activity by month.
 - Visualization highlighting patterns and trends in customer behavior.
 - Synchronized filters for seamless exploration.
+
+  ![Customer Details Dashboard](./Img/customer_details.png)
